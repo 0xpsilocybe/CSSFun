@@ -1,0 +1,77 @@
+@mixin no-select {
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none;   /* Chrome/Safari/Opera */
+  -khtml-user-select: none;    /* Konqueror */
+  -moz-user-select: none;      /* Firefox */
+  -ms-user-select: none;       /* Internet Explorer/Edge */
+  user-select: none;           /* Non-prefixed version, currently
+                                  not supported by any browser */
+}
+
+/* Remove the navbar's default margin-bottom and rounded borders */
+.navbar {
+    margin-bottom: 0;
+    border-radius: 0;
+}
+/* Set height of the grid so .sidenav can be 100% (adjust as needed) */
+.row.content {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  text-align: center;
+}
+/* Set gray background color and 100% height */
+.sidenav {
+    padding-top: 20px;
+    background-color: #f1f1f1;
+    height: 100%;
+}
+
+.keyboard-row {
+  display: inline-block;
+  clear: both;
+}
+
+$key-size: 50px;
+.letter {
+  @include no-select;
+  margin: 5px;
+  width: $key-size;
+  height: $key-size;
+  font-size: $key-size * 0.75;
+  float: left;
+  line-height: $key-size;
+  vertical-align: middle;
+  text-align: center;
+  background: #fff;
+  border: 2px solid #A9A9A9;
+  border-radius: $key-size / 4;
+  -moz-border-radius: $key-size / 4;
+  -webkit-border-radius: $key-size / 4;
+
+  &:hover {
+    background: #DCDCDC;
+    cursor: pointer;
+  }
+}
+
+/* On small screens, set height to 'auto' for sidenav and grid */
+@media screen and (max-width: 767px) {
+    .sidenav {
+        height: auto;
+        padding: 15px;
+    }
+    .row.content {
+        height: auto;
+    }
+}
+
+/* Set black background color, white text and some padding */
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background-color: #f5f5f5;
+    color: black;
+    padding: 15px;
+}
