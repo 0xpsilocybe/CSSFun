@@ -1,0 +1,28 @@
+{
+  "name": "CSSFun",
+  "description": "Just testing CSS animation libraries.",
+  "main": "index.js",
+  "authors": [
+    "Psilo"
+  ],
+  "license": "ISC",
+  "keywords": [
+    "css",
+    "animation",
+    "test",
+    "fun",
+    "web"
+  ],
+  "homepage": "https://github.com/0xpsilocybe/CSSFun",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "csshake": "*",
+    "bootstrap": "^3.3.6"
+  }
+}
